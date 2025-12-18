@@ -33,8 +33,8 @@ pipeline {
         stage('Docker Run') {
             steps {
                 bat '''
-                docker stop %CONTAINER_NAME% || exit 0
-                docker rm %CONTAINER_NAME% || exit 0
+                
+                
                 docker run -d -p %PORT2%:%PORT% --name %CONTAINER_NAME% %IMAGE_NAME%
                 '''
             }
